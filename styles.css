@@ -1,0 +1,529 @@
+ /* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header-content {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-text {
+    margin-left: 20px;
+    text-align: center; /* Centers the header text */
+    margin-top: 20px; /* Added space from the logo */
+}
+.header-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    background: linear-gradient(to right, #ffcc00, #ff6600);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    animation: colorChange 4s infinite alternate;
+}
+.header-text p {
+    font-size: 1rem;
+    margin: 0;
+}
+@keyframes colorChange {
+    from {
+        color: #ffcc00;
+    }
+    to {
+        color: #ff6600;
+    }
+}
+
+/* Header Styling */
+header {
+    background-color: #4b0082; /* Deep Purple */
+    color: #ffd700; /* Gold */
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeInDown 1s; /* Add animation */
+}
+
+header .logo {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Added space between logo and nav */
+}
+header .circle-logo {
+    border-radius: 50%; /* Makes the logo circular */
+    width: 100px; /* Adjust the size as needed */
+    height: 100px;
+}
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    animation: bounceIn 2s; /* Add animation */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffd700;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffffff; /* White on hover */
+}
+
+/* Navigation Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle .hamburger {
+    width: 30px;
+    height: 3px;
+    background: #ffd700;
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: #ffd700;
+    border-radius: 3px;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle .hamburger::before {
+    top: -8px;
+}
+
+.nav-toggle .hamburger::after {
+    top: 8px;
+}
+
+/* Active state for hamburger menu */
+.nav-toggle.active .hamburger {
+    transform: rotate(45deg);
+}
+
+.nav-toggle.active .hamburger::before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.nav-toggle.active .hamburger::after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('churchgroupphoto.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 1.5s; /* Add animation */
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 2s; /* Add animation */
+}
+
+.hero p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 2s; /* Add animation */
+}
+
+.hero .btn {
+    background: #ff4b2b;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: background 0.3s;
+    animation: bounceInUp 1.5s; /* Add animation */
+}
+
+.hero .btn:hover {
+    background: #333;
+}
+
+/* Home Page Section */
+.home {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds a subtle text shadow for better contrast */
+    animation: fadeInUp 2s; /* Add animation */
+}
+
+.home .container {
+    background: #000000; /* Adds a solid black background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.home h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffd700; /* Gold */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 2s; /* Add animation */
+}
+
+.home .service-times, .home .watch-online, .home .tithe-offering, .home .connect {
+    margin-bottom: 1.5rem;
+}
+
+.home h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #ffd700; /* Gold */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* About, Mission, Services */
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-align: center;
+    color: #4b0082; /* Deep Purple */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    animation: fadeInUp 2s; /* Add animation */
+}
+
+.section p, .section ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    padding: 10px 0;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+#about {
+    padding: 4rem 0;
+    background-color: #f9f9f9; /* Optional background for separation */
+}
+
+/*--------------------------------------------------------------
+# About Content Layout
+--------------------------------------------------------------*/
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Adds space between elements */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/*--------------------------------------------------------------
+# Text Content Styling
+--------------------------------------------------------------*/
+.about-content p {
+    flex: 1 1 300px;  /* Allows flexibility while maintaining a min width */
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    color: #333;
+    animation: fadeInUp 1s ease forwards;  /* Smooth fade-in animation */
+}
+
+/*--------------------------------------------------------------
+# Pastor Image Container
+--------------------------------------------------------------*/
+.pastor-image {
+    display: flex; /*Align image and text side by side */
+    align-items: center; /* Vertically align content */
+    gap: 20px; /* Space between image and text */
+    margin-bottom: 20px; /* space between each person block */
+    flex: 1 1 300px;  
+    text-align: center;
+    padding: 1rem;
+}
+
+/*--------------------------------------------------------------
+# Pastor Image Styling
+--------------------------------------------------------------*/
+.pastor-image img {
+    max-width: 100%;
+    width: 150px; /* Adjust the image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for interactivity */
+.pastor-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*--------------------------------------------------------------
+# Image Caption
+--------------------------------------------------------------*/
+.pastor-image p {
+    font-family: 'Dancing Script', cursive;
+    max-width: 500px; /* Optional: Limit text width */
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #555;
+}
+
+/*--------------------------------------------------------------
+# FadeInUp Animation
+--------------------------------------------------------------*/
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*--------------------------------------------------------------
+# Responsive Adjustments
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .about-content {
+        display: block; /* Stack image and text vertically */
+        text-align: center; /* Center Content */
+        flex-direction: column;
+    }
+    .about-content p,
+    .pastor-image {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .about-content p {
+        padding: 0.5rem;
+    }
+}
+
+
+/* Testimonials */
+#testimonials blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #333;
+    background: #fff;
+    border-left: 5px solid #ffd700; /* Gold */
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#testimonials footer {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #4b0082; /* Deep Purple */
+    margin-top: 10px;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#contact h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contact form .form-group {
+    margin-bottom: 15px;
+}
+
+#contact form .form-control {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+#contact form .btn {
+    background: #4b0082; /* Deep Purple */
+    color: #ffd700; /* Gold */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact form .btn:hover {
+    background: #333;
+}
+
+#contact .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Map Styling */
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background-color: #4b0082; /* Deep Purple */
+    color: #ffd700; /* Gold */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #ffd700; /* Gold */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff; /* White */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer .social-icons {
+    margin: 10px 0;
+}
+
+footer .social-icons a {
+    font-size: 18px;
+    margin: 0 5px;
